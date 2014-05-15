@@ -1,17 +1,17 @@
 <?php
 /*
 	Plugin Name: footnotes
-	Plugin URI: http://www.example.com
-	Description: adds footnotes to every page you want
+	Plugin URI: http://www.herndler.org
+	Description: simple adding footnotes to your pages
 	Author: Mark Cheret, Stefan Herndler
 	Version: 1.0.0
-	Author URI: http://www.example.com
+	Author URI: http://www.cheret.de
 	Text Domain: footnotes
 	Domain Path: /languages
 */
 
 /*
-	Copyright 2014  MC, SHE (email : support@methis.at)
+	Copyright 2014  Mark Cheret, Stefan Herndler (email : mark@cheret.de | admin@herndler.org)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 3, as
@@ -41,6 +41,8 @@ require_once(dirname(__FILE__) . "/functions.php");
 /* calls the wordpress filter function to replace content before displayed on public pages */
 add_filter('the_content', 'footnotes_replace_public_placeholders');
 add_filter('the_excerpt', 'footnotes_replace_public_placeholders');
+
+add_action('wp_enqueue_scripts', 'footnotes_public_page_scripts');
 
 
 /* only admin is allowed to execute the plugin settings */

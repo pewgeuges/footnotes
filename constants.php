@@ -21,3 +21,10 @@ define("FOOTNOTE_SETTINGS_CONTAINER", "footnote_options");
 
 /* id of input field for the combine identical setting */
 define("FOOTNOTE_INPUT_COMBINE_IDENTICAL_NAME", "footnote_input_combine_identical_id");
+
+/* id of input field for the references label setting */
+define("FOOTNOTE_INPUT_REFERENCES_NAME", "footnote_input_references_id");
+
+/* defines the start and end tag for the placeholder */
+define("FOOTNOTE_PLACEHOLDER_START", "((");
+define("FOOTNOTE_PLACEHOLDER_END", "))");

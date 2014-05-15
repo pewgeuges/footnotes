@@ -12,11 +12,13 @@ class footnotes_class_settings
 {
 	/* attribute for default settings value */
 	public static $default_settings = array(
-		FOOTNOTE_INPUT_COMBINE_IDENTICAL_NAME => ''
+		FOOTNOTE_INPUT_COMBINE_IDENTICAL_NAME => 'yes',
+		FOOTNOTE_INPUT_REFERENCES_NAME => 'References'
 	);
 	var $pagehook, $page_id, $settings_field, $options; /* class attributes */
 
-	private $a_arr_CombineIdentical;
+	private $a_arr_CombineIdentical; /* contains the storage value for the "combine identical" setting */
+	private $a_arr_References; /* contains the storage value for the references setting */
 
 	/**
 	 * @constructor
@@ -41,6 +43,14 @@ class footnotes_class_settings
 	{
 		/* add the jQuery plugin to the settings page */
 		wp_enqueue_script('jquery');
+		/* register stylesheet for the settings page */
+		wp_register_style('footnote_settings_style', plugins_url('css/settings.css', __FILE__));
+		/* add stylesheet to the settings page */
+		wp_enqueue_style('footnote_settings_style');
+		/* register stylesheet for the public page */
+		wp_register_style('footnote_public_style', plugins_url('css/footnote.css', __FILE__));
+		/* add stylesheet to the public page */
+		wp_enqueue_style('footnote_public_style');
 		/* Needed to allow metabox layout and close functionality */
 		wp_enqueue_script('postbox');
 
@@ -48,11 +58,17 @@ class footnotes_class_settings
 		register_setting($this->settings_field, $this->settings_field, array($this, 'sanitize_theme_options'));
 		/* adds the values from database to the options array or adds the default values if the database values are invalid */
 		add_option($this->settings_field, self::$default_settings);
-
+		/* collect data for "combine identical" */
 		$this->a_arr_CombineIdentical = array();
 		$this->a_arr_CombineIdentical["id"] = $this->get_field_id(FOOTNOTE_INPUT_COMBINE_IDENTICAL_NAME);
 		$this->a_arr_CombineIdentical["name"] = $this->get_field_name(FOOTNOTE_INPUT_COMBINE_IDENTICAL_NAME);
 		$this->a_arr_CombineIdentical["value"] = esc_attr($this->get_field_value(FOOTNOTE_INPUT_COMBINE_IDENTICAL_NAME));
+
+		/* collect data for "references" label */
+		$this->a_arr_References = array();
+		$this->a_arr_References["id"] = $this->get_field_id(FOOTNOTE_INPUT_REFERENCES_NAME);
+		$this->a_arr_References["name"] = $this->get_field_name(FOOTNOTE_INPUT_REFERENCES_NAME);
+		$this->a_arr_References["value"] = esc_attr($this->get_field_value(FOOTNOTE_INPUT_REFERENCES_NAME));
 	}
 
 	/**
@@ -165,6 +181,9 @@ class footnotes_class_settings
 						/* Render metaboxes */
 						settings_fields($this->settings_field);
 						do_meta_boxes($this->pagehook, 'main', null);
+						if (isset($wp_meta_boxes[$this->pagehook]['layout'])) {
+							do_meta_boxes($this->pagehook, 'layout', null);
+						}
 						?>
 					</div>
 				</div>
@@ -194,19 +213,29 @@ class footnotes_class_settings
 	 */
 	function metaboxes()
 	{
-		add_meta_box('footnote-settings', __("Settings", FOOTNOTES_PLUGIN_NAME), array($this, 'settings_box'), $this->pagehook, 'main');
-		add_meta_box('footnote-general', __("General Information", FOOTNOTES_PLUGIN_NAME), array($this, 'placeholder_box'), $this->pagehook, 'main');
+		add_meta_box('footnote-plugin-settings', __("Settings", FOOTNOTES_PLUGIN_NAME), array($this, 'settings_box'), $this->pagehook, 'main');
+		add_meta_box('footnote-plugin-general', __("General Information", FOOTNOTES_PLUGIN_NAME), array($this, 'placeholder_box'), $this->pagehook, 'main');
 	}
 
 	function settings_box() {
 		?>
-		<div>
-			<label for="<?php echo $this->a_arr_CombineIdentical["id"]; ?>"><?php echo __("Combine identical footnotes:", FOOTNOTES_PLUGIN_NAME); ?>
+		<!-- setting references label -->
+		<div class="footnote_plugin_container">
+			<label class="footnote_plugin_25" for="<?php echo $this->a_arr_References["id"]; ?>">
+				<?php echo __("References label:", FOOTNOTES_PLUGIN_NAME); ?>
 			</label>
-			<select id="<?php echo FOOTNOTE_INPUT_COMBINE_IDENTICAL_NAME; ?>"
-					name="<?php echo $this->a_arr_CombineIdentical["name"]; ?>">
-				<option value="yes">Yes</option>
-				<option value="no">No</option>
+			<input type="text" class="footnote_plugin_75" name="<?php echo $this->a_arr_References["name"]; ?>" id="<?php echo $this->a_arr_References["id"]; ?>"
+				   value="<?php echo $this->a_arr_References["value"]; ?>"/>
+		</div>
+
+		<!-- setting combine identical -->
+		<div class="footnote_plugin_container">
+			<label class="footnote_plugin_25" for="<?php echo $this->a_arr_CombineIdentical["id"]; ?>">
+				<?php echo __("Combine identical footnotes:", FOOTNOTES_PLUGIN_NAME); ?>
+			</label>
+			<select class="footnote_plugin_25" id="<?php echo FOOTNOTE_INPUT_COMBINE_IDENTICAL_NAME; ?>" name="<?php echo $this->a_arr_CombineIdentical["name"]; ?>">
+				<option value="yes"><?php echo __("Yes", FOOTNOTES_PLUGIN_NAME); ?></option>
+				<option value="no"><?php echo __("No", FOOTNOTES_PLUGIN_NAME); ?></option>
 			</select>
 			<script type="text/javascript">
 				jQuery(document).ready(function () {
@@ -216,31 +245,39 @@ class footnotes_class_settings
 		</div>
 		<?php
 	}
-}
 
 	/**
 	 * displays the placeholder tag container
 	 */
-	function placeholder_box()
-	{
+	function placeholder_box() {
 		?>
 		<div style="text-align:center;">
-			<div style="text-align:center; width:auto; display:inline-block;">
-				<p><?php echo __("Insert the following shortcode where you want your footnotes to be displayed:", FOOTNOTES_PLUGIN_NAME); ?></p>
+			<div class="footnote_placeholder_box_container">
+				<p>
+					<?php echo __("Start your footnote with the following shortcode:", FOOTNOTES_PLUGIN_NAME); ?>
+					<span class="footnote_highlight_placeholder"><?php echo FOOTNOTE_PLACEHOLDER_START; ?></span>
+				</p>
+				<p>
+					<?php echo __("...and end your footnote with this shortcode:", FOOTNOTES_PLUGIN_NAME); ?>
+					<span class="footnote_highlight_placeholder"><?php echo FOOTNOTE_PLACEHOLDER_END; ?></span>
+				</p>
 
-				<p style="color:#2244ff;font-weight:bold;"><?php echo FOOTNOTES_PLACEHOLDER; ?></p>
+				<p>&nbsp;</p>
 
-				<p><?php echo __("The plugin replaces this shortcode automatically with your footnotes", FOOTNOTES_PLUGIN_NAME); ?></p>
+				<p>
+					<span class="footnote_highlight_placeholder"><?php echo FOOTNOTE_PLACEHOLDER_START . __("example string", FOOTNOTES_PLUGIN_NAME) . FOOTNOTE_PLACEHOLDER_END; ?></span>
+					<?php echo __("will be displayed as:", FOOTNOTES_PLUGIN_NAME); ?>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<?php echo footnote_example_replacer(__("example string", FOOTNOTES_PLUGIN_NAME)); ?>
+				</p>
 
-				<p style="font-style:italic; font-size:11px;">
-					<?php echo __("If you have any questions, please don't hesitate to contact our", FOOTNOTES_PLUGIN_NAME); ?>
-					<a href="mailto:support@methis.at"
-					   style="text-decoration:underline; cursor:pointer; color: #202020;">
-						Developers
-					</a>.
+				<p>&nbsp;</p>
+
+				<p>
+					<?php echo sprintf(__("If you have any questions, please don't hesitate to %smail us%s.", FOOTNOTES_PLUGIN_NAME), '<a href="mailto:admin@herndler.org" class="footnote_plugin">', '</a>'); ?>
 				</p>
 			</div>
 		</div>
-	<?php
-
+		<?php
+	}
 } /* Class footnotes_class_settings */
