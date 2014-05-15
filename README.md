@@ -7,7 +7,7 @@ footnotes
 
 **footnotes** gives you the ability to display decently-formated footnotes on your WordPress Pages or Posts.
 
-The syntax is based on the common DokuWiki syntax for footnotes. So, to include a footnote with the text "Text," you use:
+The syntax is based on the common DokuWiki syntax for footnotes. So, to include a footnote with the text "with a footnote," you use:
 
 	Your awesome text((with a footnote))
 
