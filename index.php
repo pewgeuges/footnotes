@@ -33,6 +33,7 @@
  * Time: 16:21
  */
 
+
 /* include all defines */
 require_once(dirname(__FILE__) . "/constants.php");
 /* require plugin global functions */
@@ -42,8 +43,11 @@ require_once(dirname(__FILE__) . "/functions.php");
 add_filter('the_content', 'footnotes_replace_public_placeholders');
 add_filter('the_excerpt', 'footnotes_replace_public_placeholders');
 
-add_action('wp_enqueue_scripts', 'footnotes_public_page_scripts');
+add_filter('widget_title', 'footnotes_replace_public_placeholders', 11);
+add_filter('widget_text', 'footnotes_replace_public_placeholders', 99 );
 
+/* adds javascript and stylesheets to the public page */
+add_action('wp_enqueue_scripts', 'footnotes_public_page_scripts');
 
 /* only admin is allowed to execute the plugin settings */
 if (!function_exists('is_admin')) {
