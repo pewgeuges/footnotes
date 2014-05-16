@@ -34,7 +34,34 @@ coming soon
 
 == Changelog ==
 
-= 1.1-alpha =
+= 1.0.4 =
+* Updated replacing function when footnote is a link (bugfix)
+* Footnote hover box remains until cursor leaves footnote or hover box
+* Links in the footnote hover box are click able
+* New setting to allow footnotes on Summarized Posts
+* New setting to tell the world you're using footnotes plugin
+* New setting for the counter style of the footnote index
+** Arabic Numbers (1, 2, 3, 4, 5, ...)
+** Arabic Numbers leading 0 (01, 02, 03, 04, 05, ...)
+** Latin Characters lower-case (a, b, c, d, e, ...)
+** Latin Characters upper-case (A, B, C, D, E, ...)
+** Roman Numerals (I, II, III, IV, V, ...)
+* Adding a link to the WordPress plugin in the footer if the WP-admin accepts it
+* Updated translations for the new settings
+* re-changed the version number to have 3 digits
+
+= 1.0-gamma =
+* New setting to use personal starting and ending tag for the footnotes
+* Updated translations for the new setting
+* Updated reading settings and fallback to default values (bugfix)
+
+= 1.0-beta =
+* New setting to collapse the reference container by default
+* Added link behind the footnotes to automatically jump to the reference container
+* New function to easy output input fields for the settings page
+* Updated translation for the new setting
+
+= 1.0-alpha =
 * Separated functions in different files for a better overview
 * Added a version control to each file / class / function / variable
 * New layout for the settings menu, settings split in tabs and not a list-view
