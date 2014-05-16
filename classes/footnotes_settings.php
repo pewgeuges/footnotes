@@ -4,7 +4,7 @@
  * User: Stefan
  * Date: 15.05.14
  * Time: 16:21
- * Version: 1.0
+ * Version: 1.0-beta
  * Since: 1.0
  */
 
@@ -20,7 +20,8 @@ class Class_FootnotesSettings
 	 */
 	public static $a_arr_Default_Settings = array(
 		FOOTNOTE_INPUTFIELD_COMBINE_IDENTICAL => 'yes',
-		FOOTNOTE_INPUTFIELD_REFERENCES_LABEL  => 'References'
+		FOOTNOTE_INPUTFIELD_REFERENCES_LABEL  => 'References',
+		FOOTNOTE_INPUTFIELD_COLLAPSE_REFERENCES => ''
 	);
 	/*
 	 * resulting pagehook for adding a new sub menu page to the settings
@@ -44,10 +45,10 @@ class Class_FootnotesSettings
 	 */
 	function __construct()
 	{
-		/* loads and filters the settings for this plugin */
-		$this->a_arr_Options = footnote_filter_options( FOOTNOTE_SETTINGS_CONTAINER );
 		/* validates the settings of the plugin and replaces them with the default settings if invalid */
 		add_option( FOOTNOTE_SETTINGS_CONTAINER, self::$a_arr_Default_Settings );
+		/* loads and filters the settings for this plugin */
+		$this->a_arr_Options = footnotes_filter_options( FOOTNOTE_SETTINGS_CONTAINER );
 
 		/* execute class includes on action-even: init, admin_init and admin_menu */
 		add_action( 'init', array( $this, 'LoadScriptsAndStylesheets' ) );
@@ -177,6 +178,7 @@ class Class_FootnotesSettings
 	protected function getFieldName( $p_str_FieldName )
 	{
 		return sprintf( '%s[%s]', FOOTNOTE_SETTINGS_CONTAINER, $p_str_FieldName );
+		//return sprintf( '%s', $p_str_FieldName );
 	}
 
 	/**
@@ -188,7 +190,7 @@ class Class_FootnotesSettings
 	protected function getFieldID( $p_str_FieldID )
 	{
 		return sprintf( '%s[%s]', FOOTNOTE_SETTINGS_CONTAINER, $p_str_FieldID );
-
+		//return sprintf( '%s', $p_str_FieldID );
 	}
 
 	/**
@@ -200,6 +202,88 @@ class Class_FootnotesSettings
 	protected function getFieldValue( $p_str_Key )
 	{
 		return $this->a_arr_Options[ $p_str_Key ];
+	}
+
+	/**
+	 * outputs a input type=text
+	 * @param string $p_str_SettingsID [id of the settings field]
+	 * @param string $p_str_ClassName [css class name]
+	 * @since 1.0-beta
+	 */
+	function AddTextbox($p_str_SettingsID, $p_str_ClassName="")
+	{
+		/* collect data for given settings field */
+		$l_arr_Data = $this->LoadSetting( $p_str_SettingsID );
+
+		/* if input shall have a css class, add the style tag for it */
+		if (!empty($p_str_ClassName)) {
+			$p_str_ClassName = 'class="' . $p_str_ClassName . '"';
+		}
+
+		/* outputs an input field type TEXT */
+		echo '<input type="text" '.$p_str_ClassName.' name="'.$l_arr_Data[ "name" ].'" id="'.$l_arr_Data[ "id" ].'" value="'.$l_arr_Data[ "value" ].'"/>';
+	}
+
+	/**
+	 * outputs a input type=checkbox
+	 * @param string $p_str_SettingsID [id of the settings field]
+	 * @param string $p_str_ClassName [optional css class name]
+	 * @since 1.0-beta
+	 */
+	function AddCheckbox($p_str_SettingsID, $p_str_ClassName="")
+	{
+		/* collect data for given settings field */
+		$l_arr_Data = $this->LoadSetting( $p_str_SettingsID );
+
+		/* if input shall have a css class, add the style tag for it */
+		if (!empty($p_str_ClassName)) {
+			$p_str_ClassName = 'class="' . $p_str_ClassName . '"';
+		}
+
+		/* lookup if the checkbox shall be pre-checked */
+		$l_str_Checked = "";
+		if (footnotes_ConvertToBool($l_arr_Data["value"])) {
+			$l_str_Checked = 'checked="checked"';
+		}
+
+		/* outputs an input field type CHECKBOX */
+		echo sprintf('<input type="checkbox" '.$p_str_ClassName.' name="'.$l_arr_Data[ "name" ].'" id="'.$l_arr_Data[ "id" ].'" %s/>', $l_str_Checked);
+	}
+
+	/**
+	 * outputs a select box
+	 * @param string $p_str_SettingsID [id of the settings field]
+	 * @param array $p_arr_Options [array with options]
+	 * @param string $p_str_ClassName [optional css class name]
+	 * @since 1.0-beta
+	 */
+	function AddSelectbox($p_str_SettingsID, $p_arr_Options, $p_str_ClassName="")
+	{
+		/* collect data for given settings field */
+		$l_arr_Data = $this->LoadSetting( $p_str_SettingsID );
+
+		/* if input shall have a css class, add the style tag for it */
+		if (!empty($p_str_ClassName)) {
+			$p_str_ClassName = 'class="' . $p_str_ClassName . '"';
+		}
+
+		/* select starting tag */
+		$l_str_Output = '<select ' . $p_str_ClassName . ' name="'.$l_arr_Data[ "name" ].'" id="'.$l_arr_Data[ "id" ].'">';
+		/* loop through all array keys */
+		foreach($p_arr_Options as $l_str_Value => $l_str_Caption) {
+			/* add key as option value */
+			$l_str_Output .= '<option value="'.$l_str_Value.'"';
+			/* check if option value is set and has to be pre-selected */
+			if ($l_arr_Data["value"] == $l_str_Value) {
+				$l_str_Output .= ' selected';
+			}
+			/* write option caption and close option tag */
+			$l_str_Output .= '>' . $l_str_Caption . '</option>';
+		}
+		/* close select */
+		$l_str_Output .= '</select>';
+		/* outputs the SELECT field */
+		echo $l_str_Output;
 	}
 
 	/**
@@ -215,6 +299,7 @@ class Class_FootnotesSettings
 		/* register settings tab */
 		add_settings_section( $l_str_SectionName, __( "Settings", FOOTNOTES_PLUGIN_NAME ), array( $this, 'RegisterTab_General_Description' ), FOOTNOTE_SETTINGS_LABEL_GENERAL );
 		add_settings_field( 'Register_References_Label', __( "References label:", FOOTNOTES_PLUGIN_NAME ), array( $this, 'Register_References_Label' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
+		add_settings_field( 'Register_Collapse_References', __( "Collapse references by default:", FOOTNOTES_PLUGIN_NAME ), array( $this, 'Register_Collapse_References' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
 		add_settings_field( 'Register_Combine_Identical', __( "Combine identical footnotes:", FOOTNOTES_PLUGIN_NAME ), array( $this, 'Register_Combine_Identical' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
 	}
 
@@ -234,15 +319,18 @@ class Class_FootnotesSettings
 	 */
 	function Register_References_Label()
 	{
-		/* collect data for "combine identical" */
-		$l_arr_Data = $this->LoadSetting( FOOTNOTE_INPUTFIELD_REFERENCES_LABEL );
-		?>
-		<input class="footnote_plugin_50"
-			   type="text"
-			   name="<?php echo $l_arr_Data[ "name" ]; ?>"
-			   id="<?php echo $l_arr_Data[ "id" ]; ?>"
-			   value="<?php echo $l_arr_Data[ "value" ]; ?>"/>
-	<?php
+		/* add a textbox to the output */
+		$this->AddTextbox(FOOTNOTE_INPUTFIELD_REFERENCES_LABEL, "footnote_plugin_50");
+	}
+
+	/**
+	 * outputs the settings field for the "references label"
+	 * @since 1.0-beta
+	 */
+	function Register_Collapse_References()
+	{
+		/* add a checkbox to the output */
+		$this->AddCheckbox(FOOTNOTE_INPUTFIELD_COLLAPSE_REFERENCES);
 	}
 
 	/**
@@ -251,24 +339,13 @@ class Class_FootnotesSettings
 	 */
 	function Register_Combine_Identical()
 	{
-		/* collect data for "combine identical" */
-		$l_arr_Data = $this->LoadSetting( FOOTNOTE_INPUTFIELD_COMBINE_IDENTICAL );
-		?>
-		<select class="footnote_plugin_25"
-				id="<?php echo $l_arr_Data[ "id" ]; ?>"
-				name="<?php echo $l_arr_Data[ "name" ]; ?>">
-
-			<option value="yes"><?php echo __( "Yes", FOOTNOTES_PLUGIN_NAME ); ?></option>
-			<option value="no"><?php echo __( "No", FOOTNOTES_PLUGIN_NAME ); ?></option>
-
-		</select>
-
-		<script type="text/javascript">
-			jQuery(document).ready(function () {
-				jQuery("#<?php echo $l_arr_Data["id"]; ?> option[value='<?php echo $l_arr_Data["value"]; ?>']").prop("selected", true);
-			});
-		</script>
-	<?php
+		/* get array with option elements */
+		$l_arr_Options = array(
+			"yes" => __( "Yes", FOOTNOTES_PLUGIN_NAME ),
+			"no" => __( "No", FOOTNOTES_PLUGIN_NAME )
+		);
+		/* add a select box to the output */
+		$this->AddSelectbox(FOOTNOTE_INPUTFIELD_COMBINE_IDENTICAL, $l_arr_Options, "footnote_plugin_25");
 	}
 
 	/**
@@ -325,7 +402,7 @@ class Class_FootnotesSettings
 				</div>
 
 				<p>
-					<?php echo sprintf( __( "If you have any questions, please don't hesitate to %smail us%s.", FOOTNOTES_PLUGIN_NAME ), '<a href="mailto:admin@herndler.org" class="footnote_plugin">', '</a>' ); ?>
+					<?php echo sprintf( __( "If you have any questions, please don't hesitate to %smail us%s.", FOOTNOTES_PLUGIN_NAME ), '<a href="mailto:support@herndler.org" class="footnote_plugin">', '</a>' ); ?>
 				</p>
 			</div>
 		</div>
