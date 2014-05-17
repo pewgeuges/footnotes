@@ -6,6 +6,7 @@
 
 **footnotes** gives you the ability to display decently-formated footnotes on your WordPress Pages or Posts. **footnotes** aims to be the all-in-one solution that ships with a set of sane defaults (those footnotes we know from offline publishing) but also give the user control over how their **footnotes** are being displayed.
 
+![screenshot](https://raw.githubusercontent.com/media-competence-institute/footnotes/master/assets/screenshot-example.jpg)
 
 The syntax is based on the common DokuWiki syntax for footnotes. So, to include a footnote with the text "with a footnote," you use:
 
