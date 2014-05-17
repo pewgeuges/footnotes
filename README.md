@@ -4,7 +4,7 @@
 
 #### this plugin intends to be straight forward and customizable at the same time ####
 
-**footnotes** gives you the ability to display decently-formated footnotes on your WordPress Pages or Posts.
+**footnotes** gives you the ability to display decently-formated footnotes on your WordPress Pages or Posts. **footnotes** aims to be the all-in-one solution that ships with a set of sane defaults (those footnotes we know from offline publishing) but also give the user control over how their **footnotes** are being displayed.
 
 
 The syntax is based on the common DokuWiki syntax for footnotes. So, to include a footnote with the text "with a footnote," you use:
