@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: footnotes\n"
-"POT-Creation-Date: 2014-05-17 11:50+0100\n"
-"PO-Revision-Date: 2014-05-17 11:50+0100\n"
+"POT-Creation-Date: 2014-05-17 11:57+0100\n"
+"PO-Revision-Date: 2014-05-17 11:57+0100\n"
 "Last-Translator: Mark Cheret <mark@cheret.de>\n"
 "Language-Team: SHE <s.herndler@methis.at>\n"
 "Language: de\n"
@@ -120,7 +120,7 @@ msgstr "wird dargestellt als:"
 
 #: classes/footnotes_settings.php:487
 #, php-format
-msgid "If you have any questions, please don't hesitate to %smail us%s."
+msgid "If you have any questions, please don't hesitate to %se-mail%s us."
 msgstr "Bei Fragen können Sie uns gerne eine %se-Mail%s senden."
 
 #: includes/plugin-settings.php:22

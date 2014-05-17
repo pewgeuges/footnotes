@@ -484,7 +484,7 @@ class Class_FootnotesSettings
 				</div>
 
 				<p>
-					<?php echo sprintf( __( "If you have any questions, please don't hesitate to %smail us%s.", FOOTNOTES_PLUGIN_NAME ), '<a href="mailto:support@herndler.org" class="footnote_plugin">', '</a>' ); ?>
+					<?php echo sprintf( __( "If you have any questions, please don't hesitate to %se-mail%s us.", FOOTNOTES_PLUGIN_NAME ), '<a href="mailto:mci@cheret.co.uk" class="footnote_plugin">', '</a>' ); ?>
 				</p>
 			</div>
 		</div>
