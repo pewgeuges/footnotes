@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: footnotes\n"
-"POT-Creation-Date: 2014-05-17 01:01+0100\n"
-"PO-Revision-Date: 2014-05-17 01:01+0100\n"
-"Last-Translator: SHE <s.herndler@methis.at>\n"
+"POT-Creation-Date: 2014-05-17 11:49+0100\n"
+"PO-Revision-Date: 2014-05-17 11:49+0100\n"
+"Last-Translator: Mark Cheret <mark@cheret.de>\n"
 "Language-Team: SHE <s.herndler@methis.at>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -22,9 +22,10 @@ msgstr ""
 msgid "General"
 msgstr "General"
 
-#: classes/footnotes_settings.php:313 includes/plugin-settings.php:22
-msgid "Settings"
-msgstr "Settings"
+#: classes/footnotes_settings.php:313
+#, php-format
+msgid "%s Settings"
+msgstr "%s Settings"
 
 #: classes/footnotes_settings.php:314
 msgid "References label:"
@@ -52,8 +53,8 @@ msgstr "Allow footnotes on Summarized Posts:"
 
 #: classes/footnotes_settings.php:320
 #, php-format
-msgid "Tell the world you're using %sfootnotes%s:"
-msgstr "Tell the world you're using %sfootnotes%s:"
+msgid "Tell the world you're using %sfoot%s%snotes%s:"
+msgstr "Tell the world you're using %sfoot%s%snotes%s:"
 
 #: classes/footnotes_settings.php:361 classes/footnotes_settings.php:409
 #: classes/footnotes_settings.php:424
@@ -121,6 +122,10 @@ msgstr "will be displayed as:"
 #, php-format
 msgid "If you have any questions, please don't hesitate to %smail us%s."
 msgstr "If you have any questions, please don't hesitate to %smail us%s."
+
+#: includes/plugin-settings.php:22
+msgid "Settings"
+msgstr "Settings"
 
 #: includes/replacer.php:104
 #, php-format
