@@ -5,10 +5,13 @@ Requires at least: 3.9
 Tested up to: 3.9.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Stable tag: 1.0.4
 
 == Description ==
 
-This WordPress Plugin enables you to easily add footnotes to your Posts or Pages. They are DokuWiki-Style footnotes.
+footnotes gives you the ability to display decently-formated footnotes on your WordPress Pages or Posts.
+footnotes aims to be the all-in-one solution that ships with a set of sane defaults
+(those footnotes we know from offline publishing) but also give the user control over how their footnotes are being displayed.
 
 == Frequently Asked Questions ==
 
@@ -16,12 +19,12 @@ This WordPress Plugin enables you to easily add footnotes to your Posts or Pages
 
 It's relatively simple. Check out [the manual](https://github.com/markcheret/footnotes#footnotes).
 
-= Is your Plugin not a copy of footnotes x? =
+= Is your Plugina copy of footnotes x? =
 
-No, this Plugin has been written from scratch.
+No, this Plugin has been written from scratch. Of course some inspirations were taken from other plugins.
 
 == Installation ==
-* Download the latest version from GitHub (https://github.com/markcheret/footnotes)
+* Download the latest version from GitHub (https://github.com/media-competence-institute/footnotes)
 * in the bottom right there is a `Download ZIP` button
 * Visit your WordPress Admin area
 * Navigate to `Plugins\Add`
@@ -72,6 +75,6 @@ coming soon
 = 1.0 =
 * First development Version of the Plugin
 
-== Feedback ==
-
-== Get involved ==
+== Upgrade Notice ==
+to upgrade our plugin is simple. Just update the plugin within your WordPress installation.
+To cross-upgrade from other footnotes plugins, there will be a migration assistant in the future
