@@ -5,7 +5,7 @@ Requires at least: 3.9
 Tested up to: 3.9.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 
 == Description ==
 
@@ -36,6 +36,16 @@ No, this Plugin has been written from scratch. Of course some inspirations were 
 coming soon
 
 == Changelog ==
+
+= 1.0.5 =
+The Plugin has been submitted to wordpress.org for review and (hopefully) publication.
+* Update: Plugin description for public directories (WordPress.org and GitHub)
+* Feature: the **footnotes** WordPress Plugin now has its very own CI
+  * Update: Styling
+  * Update: Settings to support the styling
+* Add: Inspirational Screenshots for further development
+* Add: Settings screenshot
+* Update: i18n fine-tuning
 
 = 1.0.4 =
 * Updated replacing function when footnote is a link (bugfix)
