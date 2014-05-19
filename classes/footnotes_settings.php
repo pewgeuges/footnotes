@@ -317,7 +317,7 @@ class Class_FootnotesSettings
 		add_settings_field( 'Register_Placeholder_Tags', __( "Footnote tag:", FOOTNOTES_PLUGIN_NAME ), array( $this, 'Register_Placeholder_Tags' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
 		add_settings_field( 'Register_CounterStyle', __( "Counter style:", FOOTNOTES_PLUGIN_NAME ), array( $this, 'Register_CounterStyle' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
 		add_settings_field( 'Register_SearchExcerpt', __( "Allow footnotes on Summarized Posts:", FOOTNOTES_PLUGIN_NAME ), array( $this, 'Register_SearchExcerpt' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
-		add_settings_field( 'Register_LoveAndShare', sprintf(__( "Tell the world you're using %sfoot%s%snotes%s:", FOOTNOTES_PLUGIN_NAME ), '<span style="color: #2bb975; ">', '</span>', '<span style="color: #545f5a; ">', '</span>'), array( $this, 'Register_LoveAndShare' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
+		add_settings_field( 'Register_LoveAndShare', sprintf(__( "Tell the world you're using %sfoot%snotes%s:", FOOTNOTES_PLUGIN_NAME ), '<span style="color: #2bb975; ">', '</span><span style="color: #545f5a; ">', '</span>'), array( $this, 'Register_LoveAndShare' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
 	}
 
 	/**

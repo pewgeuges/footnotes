@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: footnotes\n"
-"POT-Creation-Date: 2014-05-17 11:57+0100\n"
-"PO-Revision-Date: 2014-05-17 11:57+0100\n"
+"POT-Creation-Date: 2014-05-19 09:15+0100\n"
+"PO-Revision-Date: 2014-05-19 09:16+0100\n"
 "Last-Translator: Mark Cheret <mark@cheret.de>\n"
 "Language-Team: SHE <s.herndler@methis.at>\n"
 "Language: de\n"
@@ -53,8 +53,8 @@ msgstr "Erlaube Fußnoten in Zusammenfassungen:"
 
 #: classes/footnotes_settings.php:320
 #, php-format
-msgid "Tell the world you're using %sfoot%s%snotes%s:"
-msgstr "Teil der Community mit dass Ich %sfoot%s%snotes%s verwende:"
+msgid "Tell the world you're using %sfoot%snotes%s:"
+msgstr "Teile der Welt mit, dass du %sfoot%snotes%s verwendest:"
 
 #: classes/footnotes_settings.php:361 classes/footnotes_settings.php:409
 #: classes/footnotes_settings.php:424
