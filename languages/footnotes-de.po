@@ -1,8 +1,13 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: footnotes\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2014-05-20 17:59+0100\n"
 "PO-Revision-Date: 2014-05-20 17:59+0100\n"
+=======
+"POT-Creation-Date: 2014-05-19 09:15+0100\n"
+"PO-Revision-Date: 2014-05-19 09:16+0100\n"
+>>>>>>> c10a596c823b92eeeadf31abef11581a18905b69
 "Last-Translator: Mark Cheret <mark@cheret.de>\n"
 "Language-Team: SHE <s.herndler@methis.at>\n"
 "Language: de\n"
