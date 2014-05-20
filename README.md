@@ -12,6 +12,6 @@ The syntax is based on the common DokuWiki syntax for footnotes. So, to include 
 
 	Your awesome text((with a footnote))
 
-And that's all you need to do. When you add a footnote, **footnotes** will create a note marker at the point that the foonote appears in the text, and includes the text of the footnote in a styled list of notes down the page.
+And that's all you need to do. When you add a footnote, **footnotes** will create a note marker at the point that the foonote appears in the text, and includes the text of the footnote in a styled list of notes down the page. Using `((` + `))` is the default. You can decide on what the shortcode for **footnotes** should be.
 
 This plugin (once released on wordpress.org) will give you full customizability while being shipped with a set of sane defaults.

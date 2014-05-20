@@ -4,7 +4,7 @@
  * User: Stefan
  * Date: 15.05.14
  * Time: 16:21
- * Version: 1.0-beta
+ * Version: 1.0.6
  * Since: 1.0
  */
 
@@ -16,6 +16,7 @@ class Class_FootnotesSettings
 {
 	/*
 	 * attribute for default settings value
+	 * updated default value for 'FOOTNOTE_INPUTFIELD_LOVE' to default: 'no' in version 1.0.6
 	 * @since 1.0
 	 */
 	public static $a_arr_Default_Settings = array(
@@ -25,7 +26,7 @@ class Class_FootnotesSettings
 		FOOTNOTE_INPUTFIELD_PLACEHOLDER_START => '((',
 		FOOTNOTE_INPUTFIELD_PLACEHOLDER_END => '))',
 		FOOTNOTE_INPUTFIELD_SEARCH_IN_EXCERPT => 'yes',
-		FOOTNOTE_INPUTFIELD_LOVE => 'yes',
+		FOOTNOTE_INPUTFIELD_LOVE => 'no',
 		FOOTNOTE_INPUTFIELD_COUNTER_STYLE => 'arabic_plain'
 	);
 	/*
@@ -317,7 +318,7 @@ class Class_FootnotesSettings
 		add_settings_field( 'Register_Placeholder_Tags', __( "Footnote tag:", FOOTNOTES_PLUGIN_NAME ), array( $this, 'Register_Placeholder_Tags' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
 		add_settings_field( 'Register_CounterStyle', __( "Counter style:", FOOTNOTES_PLUGIN_NAME ), array( $this, 'Register_CounterStyle' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
 		add_settings_field( 'Register_SearchExcerpt', __( "Allow footnotes on Summarized Posts:", FOOTNOTES_PLUGIN_NAME ), array( $this, 'Register_SearchExcerpt' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
-		add_settings_field( 'Register_LoveAndShare', sprintf(__( "Tell the world you're using %sfoot%s%snotes%s:", FOOTNOTES_PLUGIN_NAME ), '<span style="color: #2bb975; ">', '</span>', '<span style="color: #545f5a; ">', '</span>'), array( $this, 'Register_LoveAndShare' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
+		add_settings_field( 'Register_LoveAndShare', sprintf(__( "Tell the world you're using %sfoot%snotes%s:", FOOTNOTES_PLUGIN_NAME ), '<span style="color: #2bb975; ">', '</span><span style="color: #545f5a; ">', '</span>'), array( $this, 'Register_LoveAndShare' ), FOOTNOTE_SETTINGS_LABEL_GENERAL, $l_str_SectionName );
 	}
 
 	/**
