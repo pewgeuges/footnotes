@@ -4,7 +4,7 @@
  * User: Stefan
  * Date: 15.05.14
  * Time: 16:21
- * Version: 1.0
+ * Version: 1.0.5
  * Since: 1.0
  */
 
@@ -24,3 +24,9 @@ if ( !is_user_logged_in() ) {
 if ( !current_user_can( 'install_plugins' ) ) {
 	wp_die( __( 'You do not have permission to run this script.', FOOTNOTES_PLUGIN_NAME ) );
 }
+
+/*
+ delete the settings container in the database
+ @since 1.0.5
+*/
+delete_option(FOOTNOTE_SETTINGS_CONTAINER);
