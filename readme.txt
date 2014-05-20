@@ -5,11 +5,7 @@ Requires at least: 3.9
 Tested up to: 3.9.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-<<<<<<< HEAD
 Stable Tag: 1.0.5
-=======
-Stable tag: 1.0.5
->>>>>>> c10a596c823b92eeeadf31abef11581a18905b69
 
 == Description ==
 
@@ -43,15 +39,12 @@ coming soon
 
 == Changelog ==
 
-<<<<<<< HEAD
 = 1.0.6 =
 - Updated uninstall function to delete all plugin settings (bugfix)
 - Updated counter style internal name in the reference container to correctly link to the right footnote on the page above (bugfix)
 - Updated footnote hover box styling to not wrap the footnote text on mouse over (bugfix)
 - Changed 'Love Me' text in the page footer if admin excepts it and set its default value to 'no'
 
-=======
->>>>>>> c10a596c823b92eeeadf31abef11581a18905b69
 = 1.0.5 =
 - The Plugin has been submitted to wordpress.org for review and (hopefully) publication.
 - Update: Plugin description for public directories (WordPress.org and GitHub)
