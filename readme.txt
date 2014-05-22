@@ -5,7 +5,7 @@ Requires at least: 3.9
 Tested up to: 3.9.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Stable tag: 1.0.5
+Stable tag: 1.1.1
 
 == Description ==
 
@@ -13,7 +13,7 @@ footnotes gives you the ability to display decently-formated footnotes on your W
 footnotes aims to be the all-in-one solution that ships with a set of sane defaults
 (those footnotes we know from offline publishing) but also give the user control over how their footnotes are being displayed.
 
-Currently footnotes displays all footnote texts found within the customizable shortcodes below the footer of your website as a styled list of references with backlinks to the actual footnote. In future releases of the plugin, you can decide, where the reference list is displayed.
+footnotes displays all footnote texts found within the customizable shortcodes below the footer of your website as a styled list of references with backlinks to the actual footnote. In future releases of the plugin, you can decide, where the reference list is displayed.
 
 Development of the plugin is an open process. The current version is available on github:
 https://github.com/media-competence-institute/footnotes
@@ -26,12 +26,9 @@ Feel free to contribute and to fix errors or send improvements via GitHub.
 No, this Plugin has been written from scratch. Of course some inspirations on how to do or how to not do things were taken from other plugins.
 
 == Installation ==
-- Download the latest version from WordPress.org
-- in the bottom right there is a `Download ZIP` button
 - Visit your WordPress Admin area
 - Navigate to `Plugins\Add`
-- Select the Tab `Upload`
-- Upload the previously downloaded .zip file and hit `Install`
+- Install the latest version from WordPress.org
 - Activate the Plugin
 
 == Screenshots ==
@@ -41,10 +38,28 @@ No, this Plugin has been written from scratch. Of course some inspirations on ho
 
 == Changelog ==
 
+= 1.1.1 =
+- Feature: Short code to not display the 'love me' slug on specific pages ( short code = [[no footnotes: love]] )
+- Update: Setting where the reference container appears on public pages can also be set to the widget area
+- Add: Link to the wordpress.org support page in the plugin main page
+- Update: Changed plugin URL from GitHub to WordPress
+- Bugfix: Uninstall function to really remove all settings done in the settings page
+- Bugfix: Load default settings after plugin is installed
+- Update: Translation for support link and new setting option
+- Add: Label to display the user the short code to not display the 'love me' slug
+
+= 1.1.0 =
+- Update: Global styling for the public plugin name
+- Update: Easier usage of the public plugin name in translations
+- Update: New Layout for the settings page to group similar settings to get a better overview
+- Update: Display settings submit button only if there is at least 1 editable setting in the current tab
+- Add: Setting where the reference container appears on public pages (needs some corrections!)
+- Bugfix: Displays only one reference container in front of the footer on category pages
+
 = 1.0.6 =
-- Bugfix: Uninstall function to delete all plugin settings (bugfix)
-- Bugfix: Counter style internal name in the reference container to correctly link to the right footnote on the page above (bugfix)
-- Bugfix: Footnote hover box styling to not wrap the footnote text on mouse over (bugfix)
+- Bugfix: Uninstall function to delete all plugin settings
+- Bugfix: Counter style internal name in the reference container to correctly link to the right footnote on the page above
+- Bugfix: Footnote hover box styling to not wrap the footnote text on mouse over
 - Update: 'footnotes love' text in the page footer if the admin accepts it and set its default value to 'no'
 
 = 1.0.5 =
