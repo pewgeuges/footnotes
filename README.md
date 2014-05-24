@@ -3,7 +3,7 @@
 **footnotes** WordPress Plugin
 
 ### Development takes place at wordpress.org ###
-(http://wordpress.org/plugins/footnotes/)
+http://wordpress.org/plugins/footnotes/
 Please check the svn repo over there. We kind of hate double committing code and time.
 GitHub is the more advanced development platform, WordPress is the place of our Plugin. We develop where the Plugin lives.
 
