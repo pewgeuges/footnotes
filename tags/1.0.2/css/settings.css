@@ -1,0 +1,71 @@
+/**
+ * Created by Stefan Herndler.
+ * User: Stefan
+ * Date: 15.05.14
+ * Time: 16:21
+ * Version: 1.0-beta
+ * Since: 1.0
+ */
+
+/* overwrite some styling for inputs [type=text] and select-boxes */
+input[type=text], input[type=checkbox], input[type=password], textarea, select {
+	margin-left:   12px !important;
+}
+input[type=text], input[type=password], textarea, select {
+	padding-left:  8px !important;
+	padding-right: 8px !important;
+}
+
+/* overwrite link layout on the settings page */
+a.footnote_plugin {
+	text-decoration: underline !important;
+	cursor:          pointer !important;
+	color:           #202020 !important;
+}
+
+/* setting with 25% width */
+.footnote_plugin_25 {
+	width: 25% !important;
+}
+
+/* setting with half width */
+.footnote_plugin_50 {
+	width: 50% !important;
+}
+
+/* setting with 75% width */
+.footnote_plugin_75 {
+	width: 75% !important;
+}
+
+/* setting with full width */
+.footnote_plugin_100 {
+	width: 100% !important;
+}
+
+/* container for the box holding the placeholder tags at the end */
+.footnote_placeholder_box_container {
+	text-align: center !important;
+	/*width:       auto;
+	display:     inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: -210px;*/
+}
+
+/* highlight the placeholders */
+span.footnote_highlight_placeholder {
+	font-weight:   bold !important;
+	padding-left:  8px !important;
+	padding-right: 8px !important;
+}
+
+.footnote_placeholder_box_example {
+	border:         2px solid #ff524b !important;
+	border-radius:  4px !important;
+	padding-top:    16px !important;
+	padding-bottom: 16px !important;
+	width:          50% !important;
+	display:        block !important;
+	margin:         20px auto !important;
+}
