@@ -57,7 +57,7 @@ class MCI_Footnotes {
 	 * @author Stefan Herndler
 	 * @since 1.5.0
 	 */
-	public function initializeWidgets() {		
+	public function initializeWidgets() {
 		register_widget("MCI_Footnotes_Widget_ReferenceContainer");
 	}
 
