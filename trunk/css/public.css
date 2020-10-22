@@ -25,7 +25,7 @@
 .footnote_plugin_tooltip_text {
 	vertical-align: top !important;
 	position: relative !important;
-	top:.7em !important;
+	top: 0.4em !important;
     cursor: pointer;
 }
 
@@ -44,11 +44,16 @@
 	overflow: hidden !important;
 	border-bottom: 1px solid #aaaaaa !important;
 	display: block !important;
+	-webkit-margin-before: 0.83em !important;
+	-webkit-margin-after: 0.83em !important;
+	-webkit-margin-start: 0px !important;
+	-webkit-margin-end: 0px !important;
 	text-align: left !important;
 	vertical-align: middle;
 }
 
 .footnote_container_prepare > p > span:first-child {
+	padding-left: 20px !important;
 	text-align: left !important;
 	cursor: pointer;
 	font-size: 1.5em !important;
@@ -57,34 +62,31 @@
 /* reference container */
 .footnote-reference-container {
 	width: 100%;
-	border:none;
-	margin-left:-15px;
+	border: none;
 }
 
 /* index */
 .footnote_plugin_index {
     vertical-align: top;
 	white-space: nowrap;
+	padding-right: 5px;
 	text-align: left;
-    border:none;
-    width:0%;
+    border:none !important;
+    max-width:10% !important;
 }
 
 /* arrow */
 .footnote_plugin_link {
     vertical-align: top;
 	white-space: nowrap;
+	padding-right: 5px;
 	text-align: left;
-	width:.05em;
     cursor: pointer;
-    border:none;
-    color:#0000FF44;
 }
 
 /* text */
 .footnote_plugin_text {
     vertical-align: top;
-	width:99%;
+	width: 99%;
 	text-align: left;
-    border:none;
 }
