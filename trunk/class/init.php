@@ -38,6 +38,8 @@ class MCI_Footnotes {
 		MCI_Footnotes_WYSIWYG::registerHooks();
 		// register general hooks
 		MCI_Footnotes_Hooks::registerHooks();
+		// register all Widgets of the Plugin.
+		$this->initializeWidgets();
 		// initialize the Plugin Dashboard
 		$this->initializeDashboard();
 		// initialize the Plugin Task
@@ -47,8 +49,6 @@ class MCI_Footnotes {
 		add_action('init', array($this, 'registerPublic'));
 		// Enqueue all Public Stylesheets and Scripts
 		add_action('wp_enqueue_scripts', array($this, 'registerPublic'));
-		// Register all Widgets of the Plugin.
-		add_action('widgets_init', array($this, 'initializeWidgets'));
 	}
 
 	/**
@@ -57,8 +57,8 @@ class MCI_Footnotes {
 	 * @author Stefan Herndler
 	 * @since 1.5.0
 	 */
-	public function initializeWidgets() {
-		register_widget("MCI_Footnotes_Widget_ReferenceContainer");
+	private function initializeWidgets() {
+		add_action('widgets_init', create_function('', 'return register_widget("MCI_Footnotes_Widget_ReferenceContainer");'));
 	}
 
 	/**
