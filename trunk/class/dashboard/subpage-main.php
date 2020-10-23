@@ -82,7 +82,6 @@ class MCI_Footnotes_Layout_Settings extends MCI_Footnotes_LayoutEngine {
 
 			$this->addMetaBox("customize", "superscript", __("Superscript layout", MCI_Footnotes_Config::C_STR_PLUGIN_NAME), "Superscript"),
 			$this->addMetaBox("customize", "mouse-over-box", __("Mouse-over box", MCI_Footnotes_Config::C_STR_PLUGIN_NAME), "MouseOverBox"),
-			$this->addMetaBox("customize", "hyperlink-arrow", __("Hyperlink symbol in the Reference container", MCI_Footnotes_Config::C_STR_PLUGIN_NAME), "HyperlinkArrow"),
 			$this->addMetaBox("customize", "custom-css", __("Add custom CSS to the public page", MCI_Footnotes_Config::C_STR_PLUGIN_NAME), "CustomCSS"),
 
             $this->addMetaBox("expert", "lookup", __("WordPress hooks to look for Footnote short codes", MCI_Footnotes_Config::C_STR_PLUGIN_NAME), "lookupHooks"),
@@ -361,30 +360,6 @@ class MCI_Footnotes_Layout_Settings extends MCI_Footnotes_LayoutEngine {
 	}
 
 	/**
-	 * Displays all settings for the hyperlink arrow.
-	 *
-	 * @author Stefan Herndler
-	 * @since 1.5.0
-	 */
-	public function HyperlinkArrow() {
-		// load template file
-		$l_obj_Template = new MCI_Footnotes_Template(MCI_Footnotes_Template::C_STR_DASHBOARD, "customize-hyperlink-arrow");
-		// replace all placeholders
-		$l_obj_Template->replace(
-			array(
-				"label-symbol" => $this->addLabel(MCI_Footnotes_Settings::C_STR_HYPERLINK_ARROW, __("Hyperlink symbol", MCI_Footnotes_Config::C_STR_PLUGIN_NAME)),
-				"symbol" => $this->addSelectBox(MCI_Footnotes_Settings::C_STR_HYPERLINK_ARROW, MCI_Footnotes_Convert::getArrow()),
-
-				"label-user-defined" => $this->addLabel(MCI_Footnotes_Settings::C_STR_HYPERLINK_ARROW_USER_DEFINED, __("or enter a user defined symbol", MCI_Footnotes_Config::C_STR_PLUGIN_NAME)),
-				"user-defined" => $this->addTextBox(MCI_Footnotes_Settings::C_STR_HYPERLINK_ARROW_USER_DEFINED),
-				"comment" => __("if set it overrides the hyperlink symbol above", MCI_Footnotes_Config::C_STR_PLUGIN_NAME)
-			)
-		);
-		// display template with replaced placeholders
-		echo $l_obj_Template->getContent();
-	}
-
-	/**
 	 * Displays the custom css box.
 	 *
 	 * @author Stefan Herndler
@@ -409,9 +384,6 @@ class MCI_Footnotes_Layout_Settings extends MCI_Footnotes_LayoutEngine {
 
 				"label-class-3" => ".footnote_plugin_index",
 				"class-3" => $this->addText(__("1st column of the Reference Container, Footnotes index", MCI_Footnotes_Config::C_STR_PLUGIN_NAME)),
-
-				"label-class-4" => ".footnote_plugin_link",
-				"class-4" => $this->addText(__("2nd column of the Reference Container, Arrow / Hyperlink", MCI_Footnotes_Config::C_STR_PLUGIN_NAME)),
 
 				"label-class-5" => ".footnote_plugin_text",
 				"class-5" => $this->addText(__("3rd column of the Reference Container, Footnote text", MCI_Footnotes_Config::C_STR_PLUGIN_NAME))
