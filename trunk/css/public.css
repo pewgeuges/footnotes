@@ -6,6 +6,10 @@
  * Version: 1.0.7
  * Since: 1.0
  */
+ /**
+ * Upgrade to version 1.6.5
+ * Last modified: 2020-10-23T0613+0200
+ */
 
 /* Footnotes */
 .footnote_tag_styling, .footnote_tag_styling:hover {
@@ -89,4 +93,21 @@
     vertical-align: top;
 	width: 99%;
 	text-align: left;
+}
+
+@media print {
+	.footnote_tooltip {
+		display: none;
+	}
+}
+.footnote_tooltip {
+	text-align: left;
+}
+.footnote_plugin_index {
+	width: 9px;
+	cursor: pointer;
+	color: #000099;
+}
+td.footnote_plugin_text a {
+	color: #000099;
 }
