@@ -20,11 +20,11 @@ msgstr ""
 
 #: class/dashboard/init.php:151
 msgid "Take a look on other Plugins we have developed."
-msgstr "Jetez un oeil à d'autres plugins que nous avons développés"
+msgstr "Jetez un œil à d’autres plugins que nous avons développés."
 
 #: class/dashboard/init.php:157
 msgid "Error loading other WordPress Plugins from Manfisher. Sorry!"
-msgstr "Erreur de chargement des autres plugins depuis Manficher. Désolé!"
+msgstr "Erreur au chargement d’autres plugins WordPress depuis ManFisher. Désolé !"
 
 #: class/dashboard/init.php:173
 msgid "Install now"
@@ -44,7 +44,7 @@ msgstr "Plus de détails"
 
 #: class/dashboard/init.php:194
 msgid "Last Updated"
-msgstr "Dernière mise-à-jour"
+msgstr "Dernière mise à jour"
 
 #: class/dashboard/init.php:249
 msgid "rating based on"
@@ -61,11 +61,11 @@ msgstr "Paramètres sauvegardés"
 #: class/dashboard/subpage-diagnostics.php:48
 #: class/dashboard/subpage-diagnostics.php:60
 msgid "Diagnostics"
-msgstr "Diagnostiques"
+msgstr "Diagnostics"
 
 #: class/dashboard/subpage-diagnostics.php:73
 msgid "Displays information about the web server, PHP and WordPress"
-msgstr "Affiche des informations sur le server web, PHP and WordPress"
+msgstr "Affiche des informations sur le serveur web, PHP et WordPress"
 
 #: class/dashboard/subpage-diagnostics.php:110
 msgid "Server name"
@@ -81,7 +81,7 @@ msgstr "Agent utilisateur"
 
 #: class/dashboard/subpage-diagnostics.php:119
 msgid "Max execution time"
-msgstr "Temps d'exécution max"
+msgstr "Temps d’exécution max"
 
 #: class/dashboard/subpage-diagnostics.php:120
 msgid "seconds"
@@ -126,35 +126,31 @@ msgstr "Conteneur de références"
 #: class/dashboard/subpage-main.php:79
 #, php-format
 msgid "%s styling"
-msgstr "format %s"
+msgstr "mise en forme %s"
 
 #: class/dashboard/subpage-main.php:81
 msgid "Other"
-msgstr "Autre"
+msgstr "Autre(s)"
 
 #: class/dashboard/subpage-main.php:83
 msgid "Superscript layout"
-msgstr "Mise en page exposant"
+msgstr "Mise en forme exposant"
 
 #: class/dashboard/subpage-main.php:84
 msgid "Mouse-over box"
-msgstr "Zone de survol"
-
-#: class/dashboard/subpage-main.php:85
-msgid "Hyperlink symbol in the Reference container"
-msgstr "Lien symbole dans la table de références"
+msgstr "Infoboîte"
 
 #: class/dashboard/subpage-main.php:86
 msgid "Add custom CSS to the public page"
-msgstr "Ajouter du CSS personalisé à la page publique"
+msgstr "Ajouter du CSS personnalisé aux pages publiques"
 
 #: class/dashboard/subpage-main.php:88
 msgid "WordPress hooks to look for Footnote short codes"
-msgstr "Marqueurs WordPress à chercher pour short codes Footnote"
+msgstr "Crochets WordPress de recherche de short-codes de notes"
 
 #: class/dashboard/subpage-main.php:90
 msgid "Brief introduction in how to use the plugin"
-msgstr "Brève introduction sur l'utilisation du plugin"
+msgstr "Brève introduction à l’utilisation du plugin"
 
 #: class/dashboard/subpage-main.php:91
 msgid "Help us to improve our Plugin"
@@ -166,7 +162,7 @@ msgstr "dans le pied de page"
 
 #: class/dashboard/subpage-main.php:105
 msgid "at the end of the post"
-msgstr "à la fin du billet"
+msgstr "à la fin de l’article"
 
 #: class/dashboard/subpage-main.php:106
 msgid "in the widget area"
@@ -174,15 +170,15 @@ msgstr "dans la zone widget"
 
 #: class/dashboard/subpage-main.php:114
 msgid "References label"
-msgstr "Label références"
+msgstr "Titre de la liste des références "
 
 #: class/dashboard/subpage-main.php:117
 msgid "Collapse references by default"
-msgstr "Réduire les références par défaut"
+msgstr "Réduire les références par défaut "
 
 #: class/dashboard/subpage-main.php:120
 msgid "Where shall the reference container appear"
-msgstr "Où doit apparaitre le container de références"
+msgstr "Où doit apparaître la liste des références "
 
 #: class/dashboard/subpage-main.php:139 class/dashboard/subpage-main.php:239
 #: class/dashboard/subpage-main.php:290
@@ -196,15 +192,15 @@ msgstr "Non"
 
 #: class/dashboard/subpage-main.php:147 class/dashboard/subpage-main.php:154
 msgid "user defined"
-msgstr "défini par l'utilisateur"
+msgstr "défini par l’utilisateur"
 
 #: class/dashboard/subpage-main.php:158
 msgid "Arabic Numbers - Plain"
-msgstr "Chiffres arabes - Normal"
+msgstr "Chiffres arabes normaux"
 
 #: class/dashboard/subpage-main.php:159
 msgid "Arabic Numbers - Leading 0"
-msgstr "Chiffres arabes - précédé d'un 0"
+msgstr "Chiffres arabes sur deux chiffres minimum"
 
 #: class/dashboard/subpage-main.php:160
 msgid "Latin Character - lower case"
@@ -220,19 +216,19 @@ msgstr "Chiffres romains"
 
 #: class/dashboard/subpage-main.php:170
 msgid "Combine identical footnotes"
-msgstr "Combiner les notes de bas de page identiques"
+msgstr "Combiner les notes identiques "
 
 #: class/dashboard/subpage-main.php:173
 msgid "Footnote tag starts with"
-msgstr "Tag de notes de bas de page commence par"
+msgstr "Balise de début des notes "
 
 #: class/dashboard/subpage-main.php:176
 msgid "and ends with"
-msgstr "et finit par"
+msgstr "Balise de fin des notes "
 
 #: class/dashboard/subpage-main.php:185
 msgid "Counter style"
-msgstr "Style compteur"
+msgstr "Style de numérotation "
 
 #: class/dashboard/subpage-main.php:207 class/task.php:154
 #, php-format
@@ -255,208 +251,196 @@ msgstr "texte aléatoire"
 
 #: class/dashboard/subpage-main.php:211
 #, php-format
-msgid "Don't display a %s %s text in my footer."
-msgstr "Ne pas afficher un texte %s %s dans mon pied de page"
+msgid "Don’t display a %s %s text in my footer."
+msgstr "Ne pas afficher un texte %s %s dans mon pied de page."
 
 #: class/dashboard/subpage-main.php:219
 #, php-format
-msgid "Tell the world you're using %s"
+msgid "Tell the world you’re using %s"
 msgstr "Dites au monde que vous utilisez %s"
 
 #: class/dashboard/subpage-main.php:222
 #, php-format
 msgid ""
-"Don't tell the world you're using %s on specific pages by adding the "
+"Don’t tell the world you’re using %s on specific pages by adding the "
 "following short code:"
 msgstr ""
 "Ne pas dire au monde que vous utilisez %s sur uen page spécifique en ajoutant le "
-"short code suivant:"
+"short code suivant :"
 
 #: class/dashboard/subpage-main.php:248
 msgid "Allow footnotes on Summarized Posts"
-msgstr "Permettre les notes de bas de page sur les résumé de billets"
+msgstr "Permettre les notes de bas de page sur les résumé de billets "
 
 #: class/dashboard/subpage-main.php:250
 msgid "Enable the Expert mode"
-msgstr "Activer le mode expert"
+msgstr "Activer le mode expert "
 
 #: class/dashboard/subpage-main.php:270
 msgid "Before Footnotes index"
-msgstr "Avant l'index des notes de bas de page"
+msgstr "Avant les appels de note "
 
 #: class/dashboard/subpage-main.php:273
 msgid "After Footnotes index"
-msgstr "Après l'index des notes de bas de page"
+msgstr "Après les appels de note "
 
 #: class/dashboard/subpage-main.php:295
 msgid "top left"
-msgstr "haut gauche"
+msgstr "en haut à gauche"
 
 #: class/dashboard/subpage-main.php:296
 msgid "top center"
-msgstr "haut centre"
+msgstr "en haut au centre"
 
 #: class/dashboard/subpage-main.php:297
 msgid "top right"
-msgstr "haut droite"
+msgstr "en haut à droite"
 
 #: class/dashboard/subpage-main.php:298
 msgid "center right"
-msgstr "centre gauche"
+msgstr "au centre à gauche"
 
 #: class/dashboard/subpage-main.php:299
 msgid "bottom right"
-msgstr "bas gauche"
+msgstr "en bas à gauche"
 
 #: class/dashboard/subpage-main.php:300
 msgid "bottom center"
-msgstr "bas centre"
+msgstr "en bas au centre"
 
 #: class/dashboard/subpage-main.php:301
 msgid "bottom left"
-msgstr "bas droite"
+msgstr "en bas à droite"
 
 #: class/dashboard/subpage-main.php:302
 msgid "center left"
-msgstr "centre droite"
+msgstr "au centre à droite"
 
 #: class/dashboard/subpage-main.php:309
 msgid "Enable the mouse-over box"
-msgstr "Activer la zone de survol"
+msgstr "Activer l’infoboîte "
 
 #: class/dashboard/subpage-main.php:312
 msgid "Display only an excerpt"
-msgstr "Afficher seulement un extrait"
+msgstr "Afficher seulement le début "
 
 #: class/dashboard/subpage-main.php:315
 msgid "Maximum characters for the excerpt"
-msgstr "Caractères maxumon pour l'extrait"
+msgstr "Nombre de caractères maximum à afficher "
 
 #: class/dashboard/subpage-main.php:318
 msgid "Position"
-msgstr "Position"
+msgstr "Position "
 
 #: class/dashboard/subpage-main.php:321
 msgid "Offset X (px)"
-msgstr "Offset X (px)"
+msgstr "Décalage horizontal "
 
 #: class/dashboard/subpage-main.php:323
 msgid "Offset (X axis) in px (may be negative)"
-msgstr "Offset (X axis) in px (may be negative)"
+msgstr "En pixels ; valeur négative pour décaler vers la gauche."
 
 #: class/dashboard/subpage-main.php:325
 msgid "Offset Y (px)"
-msgstr "Offset Y (px)"
+msgstr "Décalage vertical "
 
 #: class/dashboard/subpage-main.php:327
 msgid "Offset (Y axis) in px (may be negative)"
-msgstr "Offset (Y axis) in px (may be negative)"
+msgstr "En pixels ; valeur négative pour décaler vers le bas."
 
 #: class/dashboard/subpage-main.php:329
 msgid "Color"
-msgstr "Color"
+msgstr "Couleur du texte "
 
 #: class/dashboard/subpage-main.php:331
 msgid "Empty color will use the default color defined by your current theme."
-msgstr "Empty color will use the default color defined by your current theme."
+msgstr "Laisser vide pour utiliser la couleur de texte définie par le thème actif."
 
 #: class/dashboard/subpage-main.php:333
 msgid "Background color"
-msgstr "Background color"
+msgstr "Couleur de fond "
 
 #: class/dashboard/subpage-main.php:335
 msgid ""
 "Empty color will use the default background-color defined by your current "
 "theme."
 msgstr ""
-"Empty color will use the default background-color defined by your current "
-"theme."
+"Laisser vide pour utiliser la couleur de fond définie par le thème "
+"actif."
 
 #: class/dashboard/subpage-main.php:337
 msgid "Border width (px)"
-msgstr "Border width (px)"
+msgstr "Largeur de la bordure "
 
 #: class/dashboard/subpage-main.php:339
 msgid "Set the width to 0px to hide the border."
-msgstr "Set the width to 0px to hide the border."
+msgstr "En pixels ; valeur nulle pour ne pas afficher de bordure."
 
 #: class/dashboard/subpage-main.php:341
 msgid "Border color"
-msgstr "Border color"
+msgstr "Couleur de la bordure "
 
 #: class/dashboard/subpage-main.php:343
 msgid ""
 "Empty color will use the default border-color defined by your current theme."
 msgstr ""
-"Empty color will use the default border-color defined by your current theme."
+"Laisser vide pour utiliser la couleur de bordure définie par le thème actif."
 
 #: class/dashboard/subpage-main.php:345
 msgid "Border radius (px)"
-msgstr "Border radius (px)"
+msgstr "Rayon des angles arrondis "
 
 #: class/dashboard/subpage-main.php:347
 msgid "Set the radius to 0px to avoid a radius."
-msgstr "Set the radius to 0px to avoid a radius."
+msgstr "En pixels ; valeur nulle pour des angles vifs."
 
 #: class/dashboard/subpage-main.php:349
 msgid "Max. width (px)"
-msgstr "Max. width (px)"
+msgstr "Largeur maximale "
 
 #: class/dashboard/subpage-main.php:351
 msgid "Set the max-width to 0px to disable this setting."
-msgstr "Set the max-width to 0px to disable this setting."
+msgstr "En pixels ; valeur nulle pour ne pas limiter la largeur."
 
 #: class/dashboard/subpage-main.php:353
 msgid "Box shadow color"
-msgstr "Box shadow color"
+msgstr "Couleur d’ombrage "
 
 #: class/dashboard/subpage-main.php:355
 msgid ""
 "Empty color will use the default box shadow defined by your current theme."
 msgstr ""
-"Empty color will use the default box shadow defined by your current theme."
-
-#: class/dashboard/subpage-main.php:375
-msgid "Hyperlink symbol"
-msgstr "Hyperlink symbol"
-
-#: class/dashboard/subpage-main.php:378
-msgid "or enter a user defined symbol"
-msgstr "or enter a user defined symbol"
-
-#: class/dashboard/subpage-main.php:380
-msgid "if set it overrides the hyperlink symbol above"
-msgstr "if set it overrides the hyperlink symbol above"
+"Laisser vide pour utiliser la couleur d’ombrage du thème actif."
 
 #: class/dashboard/subpage-main.php:399
 msgid "Add custom CSS"
-msgstr "Add custom CSS"
+msgstr "Ajouter des règles de style personnalisées "
 
 #: class/dashboard/subpage-main.php:402
 msgid ""
 "Available CSS classes to customize the footnotes and the reference container"
 msgstr ""
-"Available CSS classes to customize the footnotes and the reference container"
+"Classes CSS disponibles pour personnaliser les appels de note, les infoboîtes et la liste des notes"
 
 #: class/dashboard/subpage-main.php:405
 msgid "superscript, Footnotes index"
-msgstr "superscript, Footnotes index"
+msgstr "élément &lt;sup&gt; de l’appel de note en exposant"
 
 #: class/dashboard/subpage-main.php:408
 msgid "mouse-over box, tooltip for each superscript"
-msgstr "mouse-over box, tooltip for each superscript"
+msgstr "élément &lt;span&gt; de l’infoboîte qui s’affiche au survol"
 
 #: class/dashboard/subpage-main.php:411
 msgid "1st column of the Reference Container, Footnotes index"
-msgstr "1st column of the Reference Container, Footnotes index"
+msgstr "élément &lt;td&gt; de la première colonne de la liste des notes, contenant l’index de note et l’hyperlien de retour"
 
-#: class/dashboard/subpage-main.php:414
-msgid "2nd column of the Reference Container, Arrow / Hyperlink"
-msgstr "2nd column of the Reference Container, Arrow / Hyperlink"
+#: class/dashboard/subpage-main.php:417
+msgid "2nd column of the Reference Container, Footnote text"
+msgstr "élément &lt;td&gt; de la deuxième colonne de la liste des notes, contenant le texte"
 
 #: class/dashboard/subpage-main.php:417
 msgid "3rd column of the Reference Container, Footnote text"
-msgstr "3rd column of the Reference Container, Footnote text"
+msgstr "élément &lt;td&gt; de la deuxième colonne de la liste des notes, contenant le texte"
 
 #: class/dashboard/subpage-main.php:436
 msgid "WordPress hook function name"
@@ -476,15 +460,15 @@ msgstr "example string"
 
 #: class/dashboard/subpage-main.php:493
 msgid "Start your footnote with the following short code:"
-msgstr "Start your footnote with the following short code:"
+msgstr "Commencez votre note de pied de page après ce short-code :"
 
 #: class/dashboard/subpage-main.php:496
 msgid "...and end your footnote with this short code:"
-msgstr "...and end your footnote with this short code:"
+msgstr "…et finissez-la par ce short-code :"
 
 #: class/dashboard/subpage-main.php:500
 msgid "will be displayed as:"
-msgstr "will be displayed as:"
+msgstr "Cela s’affichera ainsi :"
 
 #: class/dashboard/subpage-main.php:503
 #, php-format
@@ -515,7 +499,7 @@ msgstr "Support"
 msgid "Donate"
 msgstr "Donate"
 
-#: class/task.php:370;392
+#: class/task.php:391
 #, php-format
 msgid "%scontinue%s"
 msgstr "%sLire plus%s"
@@ -526,8 +510,7 @@ msgid ""
 "The widget defines the position of the reference container if set to "
 "\"widget area\"."
 msgstr ""
-"The widget defines the position of the reference container if set to "
-"\"widget area\"."
+"Le widget definit la position de la liste des notes paramétrée à « zone widget »."
 
 #~ msgid "inline footnotes"
 #~ msgstr "inline footnotes"
@@ -544,8 +527,8 @@ msgstr ""
 #~ msgid "%s Settings"
 #~ msgstr "%s Settings"
 
-#~ msgid "If you have any questions, please don't hesitate to %se-mail%s us."
-#~ msgstr "If you have any questions, please don't hesitate to %se-mail%s us."
+#~ msgid "If you have any questions, please don’t hesitate to %se-mail%s us."
+#~ msgstr "If you have any questions, please don’t hesitate to %se-mail%s us."
 
 #~ msgid "HowTo"
 #~ msgstr "HowTo"
@@ -553,8 +536,8 @@ msgstr ""
 #~ msgid "%s Widget"
 #~ msgstr "%s Widget"
 
-#~ msgid "Hey there, I'm using the awesome WordPress Plugin called %s"
-#~ msgstr "Hey there, I'm using the awesome %s Plugin"
+#~ msgid "Hey there, I’m using the awesome WordPress Plugin called %s"
+#~ msgstr "Hey there, I’m using the awesome %s Plugin"
 
 #~ msgid "(("
 #~ msgstr "(("
