@@ -515,10 +515,10 @@ msgstr "Support"
 msgid "Donate"
 msgstr "Donate"
 
-#: class/task.php:370
+#: class/task.php:370;392
 #, php-format
 msgid "%scontinue%s"
-msgstr "%scontinue%s"
+msgstr "%sLire plus%s"
 
 #: class/widgets/reference-container.php:49
 #: class/widgets/reference-container.php:61
