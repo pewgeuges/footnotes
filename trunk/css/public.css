@@ -30,7 +30,8 @@
 	vertical-align: top !important;
 	position: relative !important;
 	top: 0.4em !important;
-    cursor: pointer;
+	cursor: pointer;
+	z-index: 1;
 }
 
 /* reference container label */
@@ -102,6 +103,7 @@
 }
 .footnote_tooltip {
 	text-align: left;
+	z-index: 99;
 }
 .footnote_plugin_index {
 	width: 9px;
