@@ -3,7 +3,7 @@
 msgid ""
 msgstr "Project-Id-Version: footnotes\nReport-Msgid-Bugs-To: http://wordpress.org/tag/footnotes\n"
 "POT-Creation-Date: 2014-10-18 20:58+0100\n"
-"PO-Revision-Date: 2020-10-25T2221+0100\n"
+"PO-Revision-Date: 2020-10-26T2229+0100\n"
 "Last-Translator: Stefan Herndler <support@herndler.org>\n"
 "Language-Team: SHE <s.herndler@methis.at>\n"
 "Language: en_GB\n"
@@ -163,7 +163,7 @@ msgstr "in the footer"
 
 #: class/dashboard/subpage-main.php:105
 msgid "at the end of the post"
-msgstr "at the end of the post"
+msgstr "at the end of the page"
 
 #: class/dashboard/subpage-main.php:106
 msgid "in the widget area"
@@ -287,7 +287,7 @@ msgstr "top left"
 
 #: class/dashboard/subpage-main.php:296
 msgid "top center"
-msgstr "center top"
+msgstr "centre top"
 
 #: class/dashboard/subpage-main.php:297
 msgid "top right"
@@ -295,7 +295,7 @@ msgstr "top right"
 
 #: class/dashboard/subpage-main.php:298
 msgid "center right"
-msgstr "center right"
+msgstr "centre right"
 
 #: class/dashboard/subpage-main.php:299
 msgid "bottom right"
@@ -303,7 +303,7 @@ msgstr "bottom right"
 
 #: class/dashboard/subpage-main.php:300
 msgid "bottom center"
-msgstr "center bottom"
+msgstr "centre bottom"
 
 #: class/dashboard/subpage-main.php:301
 msgid "bottom left"
@@ -311,7 +311,7 @@ msgstr "bottom left"
 
 #: class/dashboard/subpage-main.php:302
 msgid "center left"
-msgstr "center left"
+msgstr "centre left"
 
 #: class/dashboard/subpage-main.php:309
 msgid "Enable the mouse-over box"
