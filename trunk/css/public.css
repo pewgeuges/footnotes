@@ -9,9 +9,9 @@
 /*
  * On the basis of version 1.6.5
  * v1.6.6 unchanged.
- * bug fixes prior to v1.7.0-beta.
+ * bug fixes prior to v1.7.0-beta of 2020-10-26T0547+0100
  * Support Forum bug fixes from 2020-10-26T0622+0100 on.
- * Last modified: 2020-10-26T0623+0100
+ * Last modified: 2020-10-26T0651+0100
  */
 
 /* Footnotes */
@@ -83,15 +83,6 @@
     max-width:10% !important;
 }
 
-/* arrow */
-.footnote_plugin_link {
-    vertical-align: top;
-	white-space: nowrap;
-	padding-right: 5px;
-	text-align: left;
-    cursor: pointer;
-}
-
 /* text */
 .footnote_plugin_text {
     vertical-align: top;
@@ -114,9 +105,11 @@
 	color: #000099;
 	border: none;
 }
-td.footnote_plugin_text {
+.footnote_plugin_text {
 	border: none;
 }
-td.footnote_plugin_text a {
+/*fix for https://wordpress.org/support/topic/box-around-c-references-container/#post-13579381 */
+
+.footnote_plugin_text a {
 	color: #000099;
 }
