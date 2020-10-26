@@ -6,9 +6,12 @@
  * Version: 1.0.7
  * Since: 1.0
  */
- /**
- * Upgrade to version 1.6.5
- * Last modified: 2020-10-23T0613+0200
+/*
+ * On the basis of version 1.6.5
+ * v1.6.6 unchanged.
+ * bug fixes prior to v1.7.0-beta.
+ * Support Forum bug fixes from 2020-10-26T0622+0100 on.
+ * Last modified: 2020-10-26T0623+0100
  */
 
 /* Footnotes */
@@ -109,6 +112,10 @@
 	width: 9px;
 	cursor: pointer;
 	color: #000099;
+	border: none;
+}
+td.footnote_plugin_text {
+	border: none;
 }
 td.footnote_plugin_text a {
 	color: #000099;
