@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: footnotes\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/footnotes\n"
 "POT-Creation-Date: 2014-10-18 20:59+0100\n"
-"PO-Revision-Date: 2020-10-25T2217+0100\n"
+"PO-Revision-Date: 2020-10-26T2229+0100\n"
 "Last-Translator: Stefan Herndler <support@herndler.org>\n"
 "Language-Team: SHE <s.herndler@methis.at>\n"
 "Language: en_US\n"
@@ -165,7 +165,7 @@ msgstr "in the footer"
 
 #: class/dashboard/subpage-main.php:105
 msgid "at the end of the post"
-msgstr "at the end of the post"
+msgstr "at the end of the page"
 
 #: class/dashboard/subpage-main.php:106
 msgid "in the widget area"
