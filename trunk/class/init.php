@@ -6,7 +6,8 @@
  * @author Stefan Herndler
  * @since 1.5.0 12.09.14 10:56
  */
-
+//  Added jQueryUI on 2020-10-26T1907+0100
+//  Following @vonpiernik <https://wordpress.org/support/topic/tooltip-hover-not-showing/#post-13456762>
 
 /**
  * Entry point of the Plugin. Loads the Dashboard and executes the Task.
@@ -32,17 +33,18 @@ class MCI_Footnotes {
 	 * @since 1.5.0
 	 */
 	public function run() {
-		// register language
+	        // register language
 		MCI_Footnotes_Language::registerHooks();
 		// register Button hooks
 		MCI_Footnotes_WYSIWYG::registerHooks();
 		// register general hooks
 		MCI_Footnotes_Hooks::registerHooks();
+		
 		// initialize the Plugin Dashboard
 		$this->initializeDashboard();
 		// initialize the Plugin Task
 		$this->initializeTask();
-
+		
 		// Register all Public Stylesheets and Scripts
 		add_action('init', array($this, 'registerPublic'));
 		// Enqueue all Public Stylesheets and Scripts
@@ -58,7 +60,7 @@ class MCI_Footnotes {
 	 * @since 1.5.0
 	 */
 	public function initializeWidgets() {
-		register_widget("MCI_Footnotes_Widget_ReferenceContainer");
+	  register_widget("MCI_Footnotes_Widget_ReferenceContainer");
 	}
 
 	/**
@@ -89,9 +91,17 @@ class MCI_Footnotes {
 	 * @since 1.5.0
 	 */
 	public function registerPublic() {
+		
+		// Add jQueryUI following @vonpiernik <https://wordpress.org/support/topic/tooltip-hover-not-showing/#post-13456762>:
+		wp_register_script( 'jQueryUI', 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', null, null, true );
+		wp_enqueue_script( 'jQueryUI' );
+		
+
 		wp_enqueue_style('mci-footnotes-css-public', plugins_url('../css/public.css', __FILE__));
 		// add the jQuery plugin (already registered by WordPress)
 		wp_enqueue_script('jquery');
-		wp_enqueue_script('mci-footnotes-js-jquery-tools', plugins_url('../js/jquery.tools.min.js', __FILE__));
+		
+		// Finish adding jQueryUI:
+		wp_enqueue_script('mci-footnotes-js-jquery-tools', plugins_url('../js/jquery.tools.min.js', __FILE__), ['jQueryUI']);
 	}
 }
