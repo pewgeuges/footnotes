@@ -47,4 +47,18 @@ As @vonpiernik advised, the jQueryUI library has been linked, jquery.tools.min.j
 
 The footnotes plugin did not include common hyperlinks between footnote anchors and footnotes. These have been added according to https://wordpress.org/support/topic/mouse-over-box-continue-bug/#post-13579708 to ensure interactivity when JavaScript is disabled in the user agent.
 
-[in progress]
+### Get the “Continue reading” link to work in the mouse-over box
+
+The hyperlink on %scontinue%s had an empty address causing the page to scroll to top, and the jQuery function was lacking the footnote ID prefix so it couldn’t override the default. The prefix has been added as intended, and the correct fragment identifier has been replicated to populate the href. Additionally the button is given a CSS class.
+
+### Debug printed posts and pages
+
+When printing, the tooltip infobox content was not hidden. That has been fixed with a CSS media query.
+
+### Fix display of combined identical notes
+
+When the “Combine identical notes” setting is enabled—and it is so by default—the footnote identifiers are lining up in the notes list because the white-space property was set to nowrap. That has been quickly set to a usable default.
+
+### Adjusted scrolling time and offset
+
+The jQuery controlled scrolling was set to take one second. The scroll target displayed in the center of the screen, at half-height. These values have been set to more expected defaults: 80 ms and 5 % from top. Settings are projected giving the user full control over scrolling behavior.
