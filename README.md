@@ -19,7 +19,7 @@ The extra **symbol for backlinks** taking up a column in the reference container
 1. In the text, a click on the index number takes the reader to the footnote;
 2. In the list, a click on the footnote number takes the reader back to the text.
 
-As an apparent disruption, this fix requires incrementing the major version number according to semantic versioning.
+As an apparent disruption, this fix requires incrementing the major version number according to semantic versioning. The planned release is v2.0.0.
 
 ### More about the background
 
@@ -35,13 +35,17 @@ Backlink icons only clutter the reference container and should absolutely be avo
 
 Most if not all other plugins append the backlinks to the footnote text. “footnotes” went one step further by aligning the backlinks next to the footnote numbers. When backlink icons are close to the numbers, it becomes clear to everyone that there is something wrong in that the idea wasn’t carried out. Completing the move is really easy, fully backwards compatible and a good deal of UX enhancement.
 
-## Other fixes
+## Infrastructure updates
 
 ### Upgrade jQuery library
 
-See https://wordpress.org/support/topic/tooltip-hover-not-showing/#post-13456762
+As @vonpiernik advised in https://wordpress.org/support/topic/tooltip-hover-not-showing/#post-13456762, the jQueryUI library has been linked, jquery.tools.min.js has been fixed, and the tooltip infobox tested in WordPress v5.5.1, where the mouse-over boxes have started showing up.
 
-As @vonpiernik advised, the jQueryUI library has been linked, jquery.tools.min.js has been fixed, and the tooltip infobox tested in WordPress v5.5.1, where the mouse-over boxes have started showing up.
+### Account for disruptive PHP change
+
+MatKus advised in https://wordpress.org/support/topic/error-missing-parameter-if-using-php-7-1-or-later/ that most recent PHP versions throw a fatal error when the apply_filter() function is not given a third, undocumented empty argument.
+
+## Other major fixes
 
 ### Make footnote links script independent
 
@@ -55,6 +59,8 @@ The hyperlink on %scontinue%s had an empty address causing the page to scroll to
 
 When printing, the tooltip infobox content was not hidden. That has been fixed with a CSS media query.
 
+https://wordpress.org/support/topic/printing-pdf-with-footnotes-generated-by-footnotes/
+
 ### Fix display of combined identical notes
 
 When the “Combine identical notes” setting is enabled—and it is so by default—the footnote identifiers are lining up in the notes list because the white-space property was set to nowrap. That has been quickly set to a usable default.
@@ -62,3 +68,15 @@ When the “Combine identical notes” setting is enabled—and it is so by defa
 ### Adjusted scrolling time and offset
 
 The jQuery controlled scrolling was set to take one second. The scroll target displayed in the center of the screen, at half-height. These values have been set to more expected defaults: 80 ms and 5 % from top. Settings are projected giving the user full control over scrolling behavior.
+
+## Minor fixes
+
+### Margins around footnotes
+
+The thin margins around individual footnotes have raised criticism and are therefore disabled by default. Indeed these margins are extremely uncommon.
+
+https://wordpress.org/support/topic/thin-box-around-notes-in-reference-container/
+
+### Mouse-over box display timing
+
+Delays and fade-in/out times are adjusted for a smoother user experience and are projected to be part of the planned new settings.
