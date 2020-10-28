@@ -1,4 +1,4 @@
-![footnotes](https://raw.githubusercontent.com/media-competence-institute/footnotes/master/assets/footnotes.png)
+![footnotes](https://raw.githubusercontent.com/media-competence-institute/footnotes/master/img/footnotes.png)
 
 **footnotes** WordPress Plugin
 
