@@ -9,7 +9,7 @@
  
 /*
  * Revised on the basis of version 1.6.5 (v1.6.6 unchanged).
- * Last modified: 2020-10-28T0301+0100
+ * Last modified: 2020-10-28T0350+0100
  */
  
 /* Footnotes */
@@ -33,6 +33,14 @@
 	top: 0.6em !important;
 	cursor: pointer;
 	z-index: 1;
+}
+.footnote_plugin_tooltip_text a {
+	color: inherit;
+	text-decoration: none;
+}
+.footnote_plugin_tooltip_text a:hover {
+	color: #000099;
+	text-decoration: underline;
 }
 
 /* tooltip infobox content */
@@ -107,18 +115,30 @@ span.footnote_tooltip {
 	vertical-align: top;
 }
 
+/* index */
+.footnote_plugin_index {
+	padding-right: 5px;
+    min-width: 50px;
+	cursor: pointer;
+}
+.footnote_plugin_index a {
+	color: inherit;
+	text-decoration: none;
+}
+.footnote_plugin_index a:hover {
+	color: #000099;
+	text-decoration: underline;
+}
+
 /* text */
 .footnote_plugin_text {
 	width: 90%;
 }
 .footnote_plugin_text a {
 	color: inherit;
+	text-decoration: none;
 }
-
-/* index */
-.footnote_plugin_index {
-	padding-right: 5px;
-    min-width: 50px;
-	cursor: pointer;
-	color: inherit;
+.footnote_plugin_text a:hover {
+	color: #000099;
+	text-decoration: underline;
 }
