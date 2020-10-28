@@ -9,12 +9,13 @@
  
 /*
  * Revised on the basis of version 1.6.5 (v1.6.6 unchanged).
- * Last modified: 2020-10-28T0350+0100
+ * Last modified: 2020-10-28T0356+0100
  */
  
 /* Footnotes */
 
-.footnote_tag_styling, .footnote_tag_styling:hover {
+.footnote_tag_styling,
+.footnote_tag_styling:hover {
     text-decoration: none;
     font-weight: normal;
 }
