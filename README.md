@@ -1,4 +1,4 @@
-![footnotes](https://raw.githubusercontent.com/media-competence-institute/footnotes/master/assets/footnotes.png)
+![footnotes](https://plugins.svn.wordpress.org/footnotes/assets/banner-1544x500.jpg)
 
 **footnotes** WordPress Plugin
 
