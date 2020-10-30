@@ -8,7 +8,7 @@
  * 
  */
 /*
-Last modified: 2020-10-29T1402+0100
+Last modified: 2020-10-30T1105+0100
 */
 // If called directly, abort:
 defined( 'ABSPATH' ) or die;
@@ -309,10 +309,8 @@ class MCI_Footnotes_Task {
      * @return string
      */
     public function search($p_str_Content, $p_bool_ConvertHtmlChars, $p_bool_HideFootnotesText) {
-		// prepare prepending post ID to make footnote IDs unique wrt archive view:
-		$id_underscore = get_the_id();
-		$id_underscore .= '_';
-		self::$a_str_Prefix = $id_underscore;
+        // prepare prepending post ID to make footnote IDs unique wrt archive view:
+        self::$a_str_Prefix = get_the_id() . '_';
         // contains the index for the next footnote on this page
         $l_int_FootnoteIndex = count(self::$a_arr_Footnotes) + 1;
         // contains the starting position for the lookup of a footnote
@@ -378,7 +376,11 @@ class MCI_Footnotes_Task {
                     if (is_int($l_int_MaxLength) && strlen($l_str_DummyText) > $l_int_MaxLength) {
                         $l_str_ExcerptText = substr($l_str_DummyText, 0, $l_int_MaxLength);
                         $l_str_ExcerptText = substr($l_str_ExcerptText, 0, strrpos($l_str_ExcerptText, ' '));
-                        $l_str_ExcerptText .= '&nbsp;&#x2026; ' . sprintf(__("%scontinue%s", MCI_Footnotes_Config::C_STR_PLUGIN_NAME), '<a class="continue" href="#footnote_plugin_reference_' . self::$a_str_Prefix.$l_str_Index . '" onclick="footnote_moveToAnchor(\'footnote_plugin_reference_' . self::$a_str_Prefix . $l_str_Index . '\');">', '</a>');
+                        $l_str_ExcerptText .= '&nbsp;&#x2026; ' . sprintf(
+                            __("%scontinue%s", MCI_Footnotes_Config::C_STR_PLUGIN_NAME), 
+                            '<a class="continue" href="#footnote_plugin_reference_' . self::$a_str_Prefix.$l_str_Index . '" onclick="footnote_moveToAnchor(\'footnote_plugin_reference_' . self::$a_str_Prefix . $l_str_Index . '\');">', 
+                            '</a>'
+                        );
                     }
                 }
 
