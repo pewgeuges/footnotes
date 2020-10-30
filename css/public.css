@@ -44,15 +44,17 @@
 span.footnote_tooltip {
 	font-size: inherit;
 	text-align: left;
+	line-height: 1.2em;
 	z-index: 99;
 }
 .continue {
 	font-style: italic;
 	color: green;
+	text-decoration: none !important;
 }
 .continue:hover {
 	color: blue;
-	text-decoration: underline;
+	text-decoration: underline !important;
 }
 
 /* reference container */
