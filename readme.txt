@@ -4,7 +4,7 @@ Tags: footnote, footnotes, bibliography, formatting, notes, Post, posts, referen
 Requires at least: 3.9
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable Tag: 2.0.2
+Stable Tag: 2.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -80,13 +80,21 @@ Visit this swift write-up from a **footnotes** user by the name of **Southwest**
 
 == Changelog ==
 
+= 2.0.3 =
+- Bugfix: Layout: Self-adjusting width of ID column but hidden overflow
+- Update: Prepended transitional up arrow to backlinking footnote numbers
+- Bugfix: Fragment IDs: Prepended post ID to footnote number
+- Bugfix: Feed plugin version in style sheet query string for cache busting
+- Bugfix: Print style: Hide reference collapse button when printing
+- Update: Layout: Removed padding before reference container label
+
 = 2.0.2 =
+- Bugfix: Restored expand/collapse button of reference container
 - Bugfix: Dashboard: Available CSS selectors, last item display
 - Bugfix: Footnote anchor and ID color to default on screen, to inherit in print
 - Bugfix: Disabled underline in footnote anchors, underline only on hover
 
 = 2.0.1 =
-- Bugfix: Restored expand/collapse button of reference container
 - Bugfix: Fixed public.css
 - Update: Language fr_FR along with es_ES, de_AT, de_DE, en_GB, en_US for 2.0
 
@@ -101,7 +109,7 @@ Visit this swift write-up from a **footnotes** user by the name of **Southwest**
 - Bugfix: Debug printed posts and pages
 - Bugfix: Display of combined identical notes
 - Update: Adjusted scrolling time and offset
-- Bugfix: No margins around footnotes
+- Bugfix: No borders around footnotes in the container
 - Bugfix: Mouse-over box display timing
 
 = 1.6.6 =
